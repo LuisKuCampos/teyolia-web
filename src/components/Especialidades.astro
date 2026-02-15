@@ -1,97 +1,257 @@
+---
+import { Image } from "astro:assets";
+
+// Importación de las imágenes (Asegúrate que los nombres coinciden EXACTAMENTE con tu carpeta assets)
+import gastronomicaImg from "../assets/Gastronomica.jpg";
+import bodasImg from "../assets/Bodas.jpg";
+import retratoImg from "../assets/Retrato.jpg";
+import xvAnosImg from "../assets/XVAÑOS.jpg";
+import administrativaImg from "../assets/Administrativa.jpg";
+import residencialImg from "../assets/Residencial.jpg";
+---
+
 <section class="py-24 bg-background-light relative" id="specialties">
   <div class="container mx-auto px-4 md:px-8">
-    
     <div class="text-center mb-20 reveal-element">
-      <span class="block text-[10px] uppercase tracking-[0.4em] mb-4 text-gray-500">Portafolio</span>
-      <h2 class="font-display text-4xl md:text-5xl text-gray-900 uppercase tracking-widest">Mis Especialidades</h2>
+      <span
+        class="block text-[10px] uppercase tracking-[0.4em] mb-4 text-gray-500"
+        >Portafolio</span
+      >
+      <h2
+        class="font-display text-4xl md:text-5xl text-gray-900 uppercase tracking-widest"
+      >
+        Mis Especialidades
+      </h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-      
-      <div class="group relative cursor-pointer reveal-element" style="transition-delay: 100ms;">
+      <div
+        class="group relative cursor-pointer reveal-element"
+        style="transition-delay: 100ms;"
+      >
         <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
-          <div class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"></div>
-          
-          <img src="/img/Gastronomica.jpg" alt="Fotografía Gastronómica" class="w-full h-full object-cover image-hover-zoom transition-all duration-700"/>
-          
-          <div class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20">
-            <h3 class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">Gastronómicas</h3>
-            <span class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"></span>
-            <p class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase">Ver Galería</p>
+          <div
+            class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"
+          >
+          </div>
+
+          <Image
+            src={gastronomicaImg}
+            alt="Fotografía Gastronómica"
+            width={600}
+            quality="mid"
+            class="w-full h-full object-cover image-hover-zoom transition-all duration-700"
+          />
+
+          <div
+            class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20"
+          >
+            <h3
+              class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500"
+            >
+              Gastronómicas
+            </h3>
+            <span
+              class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"
+            ></span>
+            <p
+              class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase"
+            >
+              Ver Galería
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="group relative cursor-pointer reveal-element" style="transition-delay: 200ms;">
+      <div
+        class="group relative cursor-pointer reveal-element"
+        style="transition-delay: 200ms;"
+      >
         <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
-          <div class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"></div>
-          
-          <img src="/img/Bodas.jpg" alt="Fotografía Bodas" class="w-full h-full object-cover image-hover-zoom transition-all duration-700"/>
-          
-          <div class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20">
-            <h3 class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">Bodas</h3>
-            <span class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"></span>
-            <p class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase">Ver Galería</p>
+          <div
+            class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"
+          >
+          </div>
+
+          <Image
+            src={bodasImg}
+            alt="Fotografía Bodas"
+            width={600}
+            quality="mid"
+            class="w-full h-full object-cover image-hover-zoom transition-all duration-700"
+          />
+
+          <div
+            class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20"
+          >
+            <h3
+              class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500"
+            >
+              Bodas
+            </h3>
+            <span
+              class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"
+            ></span>
+            <p
+              class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase"
+            >
+              Ver Galería
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="group relative cursor-pointer reveal-element" style="transition-delay: 300ms;">
+      <div
+        class="group relative cursor-pointer reveal-element"
+        style="transition-delay: 300ms;"
+      >
         <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
-          <div class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"></div>
-          
-          <img src="/img/Retrato.jpg" alt="Fotografía Retrato" class="w-full h-full object-cover image-hover-zoom transition-all duration-700"/>
-          
-          <div class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20">
-            <h3 class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">Retrato</h3>
-            <span class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"></span>
-            <p class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase">Ver Galería</p>
+          <div
+            class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"
+          >
+          </div>
+
+          <Image
+            src={retratoImg}
+            alt="Fotografía Retrato"
+            width={600}
+            quality="mid"
+            class="w-full h-full object-cover image-hover-zoom transition-all duration-700"
+          />
+
+          <div
+            class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20"
+          >
+            <h3
+              class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500"
+            >
+              Retrato
+            </h3>
+            <span
+              class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"
+            ></span>
+            <p
+              class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase"
+            >
+              Ver Galería
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="group relative cursor-pointer reveal-element" style="transition-delay: 300ms;">
+      <div
+        class="group relative cursor-pointer reveal-element"
+        style="transition-delay: 300ms;"
+      >
         <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
-          <div class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"></div>
-          
-          <img src="/img/XVAÑOS.jpg" alt="Fotografía XV AÑOS" class="w-full h-full object-cover image-hover-zoom transition-all duration-700"/>
-          
-          <div class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20">
-            <h3 class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">XV años</h3>
-            <span class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"></span>
-            <p class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase">Ver Galería</p>
+          <div
+            class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"
+          >
+          </div>
+
+          <Image
+            src={xvAnosImg}
+            alt="Fotografía XV AÑOS"
+            width={600}
+            quality="mid"
+            class="w-full h-full object-cover image-hover-zoom transition-all duration-700"
+          />
+
+          <div
+            class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20"
+          >
+            <h3
+              class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500"
+            >
+              XV años
+            </h3>
+            <span
+              class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"
+            ></span>
+            <p
+              class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase"
+            >
+              Ver Galería
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="group relative cursor-pointer reveal-element" style="transition-delay: 300ms;">
+      <div
+        class="group relative cursor-pointer reveal-element"
+        style="transition-delay: 300ms;"
+      >
         <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
-          <div class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"></div>
-          
-          <img src="/img/Administrativa.jpg" alt="Fotografía Administrativa" class="w-full h-full object-cover image-hover-zoom transition-all duration-700"/>
-          
-          <div class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20">
-            <h3 class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">Administrativas</h3>
-            <span class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"></span>
-            <p class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase">Ver Galería</p>
+          <div
+            class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"
+          >
+          </div>
+
+          <Image
+            src={administrativaImg}
+            alt="Fotografía Administrativa"
+            width={600}
+            quality="mid"
+            class="w-full h-full object-cover image-hover-zoom transition-all duration-700"
+          />
+
+          <div
+            class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20"
+          >
+            <h3
+              class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500"
+            >
+              Administrativas
+            </h3>
+            <span
+              class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"
+            ></span>
+            <p
+              class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase"
+            >
+              Ver Galería
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="group relative cursor-pointer reveal-element" style="transition-delay: 300ms;">
+      <div
+        class="group relative cursor-pointer reveal-element"
+        style="transition-delay: 300ms;"
+      >
         <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
-          <div class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"></div>
-          
-          <img src="/img/Residencial.jpg" alt="Fotografía Residenciales" class="w-full h-full object-cover image-hover-zoom transition-all duration-700"/>
-          
-          <div class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20">
-            <h3 class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">Residenciales/Airbnb</h3>
-            <span class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"></span>
-            <p class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase">Ver Galería</p>
+          <div
+            class="absolute inset-0 bg-black/40 md:bg-black/20 md:group-hover:bg-black/40 transition-colors z-10 duration-500"
+          >
+          </div>
+
+          <Image
+            src={residencialImg}
+            alt="Fotografía Residenciales"
+            width={600}
+            quality="mid"
+            class="w-full h-full object-cover image-hover-zoom transition-all duration-700"
+          />
+
+          <div
+            class="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20"
+          >
+            <h3
+              class="font-display text-2xl text-white uppercase tracking-widest mb-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500"
+            >
+              Residenciales/Airbnb
+            </h3>
+            <span
+              class="h-px bg-white w-12 md:w-0 md:group-hover:w-12 transition-all duration-500 ease-out"
+            ></span>
+            <p
+              class="text-[10px] text-white/80 tracking-widest mt-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100 uppercase"
+            >
+              Ver Galería
+            </p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>

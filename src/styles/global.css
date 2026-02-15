@@ -124,3 +124,18 @@ html {
         transform: scale(1.05); /* ...la imagen hace un zoom suave al 105% */
     }
 }
+
+/* Esto es necesario para que funcione el scroll horizontal de la galería */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.snap-x-mandatory {
+    scroll-snap-type: x mandatory;
+}
+.snap-center {
+    scroll-snap-align: center;
+}
