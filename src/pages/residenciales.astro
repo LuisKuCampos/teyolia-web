@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import FotosRecidencial from "../components/FotosResidencial.astro"; // <--- IMPORTAR
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="RESIDENCIALES - Teyolia">
+    <Navbar />
+
+    <FotosRecidencial
+        title="Historias de Personas"
+        subtitle="Momentos que duran para siempre"
+    />
+
+    <Footer />
+</Layout>
