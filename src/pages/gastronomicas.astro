@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import FotosGastro from "../components/FotosGastro.astro"; // <--- IMPORTAR
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Gastronomicas - Teyolia">
+    <Navbar />
+
+    <FotosGastro
+        title="Historias de Sabores"
+        subtitle="Momentos que duran para siempre"
+    />
+
+    <Footer />
+</Layout>
