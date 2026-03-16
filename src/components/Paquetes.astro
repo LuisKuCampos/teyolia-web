@@ -7,6 +7,8 @@ import esenciaImg from "../assets/paquetes/Escencia.jpg";
 import conexionImg from "../assets/paquetes/Conexion.jpg";
 import almaImg from "../assets/paquetes/Alma.jpg";
 import miniSesionImg from "../assets/paquetes/MiniSesion.jpg";
+import xvImg from "../assets/paquetes/paquetes1xv.jpg";
+import bodasImg from "../assets/paquetes/paquetes1bodas.jpg";
 ---
 
 <section class="py-24 bg-white transition-colors duration-500">
@@ -24,7 +26,7 @@ import miniSesionImg from "../assets/paquetes/MiniSesion.jpg";
       </h2>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <div
         class="flex flex-col items-center text-center group cursor-pointer reveal-element delay-100"
       >
@@ -173,6 +175,84 @@ import miniSesionImg from "../assets/paquetes/MiniSesion.jpg";
             class="text-lg font-serif italic text-gray-800 group-hover:text-primary transition-colors duration-300"
           >
             $2,500 MXN
+          </p>
+        </div>
+      </div>
+
+      <!-- XV AÑOS -->
+      <div
+        class="flex flex-col items-center text-center group cursor-pointer reveal-element delay-500"
+      >
+        <div
+          class="w-full aspect-square overflow-hidden mb-6 bg-gray-100 relative"
+        >
+          <Image
+            src={xvImg}
+            alt="Quinceañera retrato"
+            width={500}
+            class="w-full h-full object-cover transition-transform duration-300 ease-out group-active:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-black/0 group-hover:bg-white/10 transition-colors duration-500"
+          >
+          </div>
+        </div>
+        <div class="hover-float w-full flex flex-col items-center">
+          <h3
+            class="text-2xl font-display text-gray-900 tracking-wider mb-2 transition-colors duration-300 group-hover:text-primary"
+          >
+            XV AÑOS
+          </h3>
+          <div
+            class="w-8 h-[1px] bg-primary mb-4 transition-all duration-300 group-hover:w-16"
+          >
+          </div>
+          <p class="text-xs uppercase tracking-widest text-gray-500 mb-1">
+            Desde
+          </p>
+          <p
+            class="text-lg font-serif italic text-gray-800 group-hover:text-primary transition-colors duration-300"
+          >
+            $5,000 MXN
+          </p>
+        </div>
+      </div>
+
+      <!-- BODAS -->
+      <div
+        class="flex flex-col items-center text-center group cursor-pointer reveal-element delay-600"
+      >
+        <div
+          class="w-full aspect-square overflow-hidden mb-6 bg-gray-100 relative"
+        >
+          <Image
+            src={bodasImg}
+            alt="Pareja de Boda"
+            width={500}
+            class="w-full h-full object-cover transition-transform duration-300 ease-out group-active:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-black/0 group-hover:bg-white/10 transition-colors duration-500"
+          >
+          </div>
+        </div>
+        <div class="hover-float w-full flex flex-col items-center">
+          <h3
+            class="text-2xl font-display text-gray-900 tracking-wider mb-2 transition-colors duration-300 group-hover:text-primary"
+          >
+            BODAS
+          </h3>
+          <div
+            class="w-8 h-[1px] bg-primary mb-4 transition-all duration-300 group-hover:w-16"
+          >
+          </div>
+          <p class="text-xs uppercase tracking-widest text-gray-500 mb-1">
+            Desde
+          </p>
+          <p
+            class="text-lg font-serif italic text-gray-800 group-hover:text-primary transition-colors duration-300"
+          >
+            $5,000 MXN
           </p>
         </div>
       </div>
