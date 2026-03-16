@@ -86,7 +86,7 @@ const xvañosimages = Object.values(images);
 
 <script>
   // Al usar Astro, es buena práctica envolver el script por si usas View Transitions
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("astro:page-load", () => {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById(
       "lightbox-img",
