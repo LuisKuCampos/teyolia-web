@@ -70,7 +70,63 @@
                         ></span>
                 </a>
         </div>
-        <button class="md:hidden text-white">
+        <button id="mobile-menu-btn" class="md:hidden text-white z-50">
                 <span class="material-icons-outlined text-3xl">menu</span>
         </button>
+
+        <!-- Menú Móvil Desplegable -->
+        <div 
+            id="mobile-menu" 
+            class="fixed inset-0 bg-black/95 backdrop-blur-md flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-40"
+        >
+            <div class="flex flex-col space-y-8 text-center text-lg tracking-[0.2em] font-medium uppercase mt-12">
+                <a
+                        class="mobile-link text-white hover:text-primary transition-colors duration-300"
+                        href="/"
+                >
+                        Inicio
+                </a>
+                <a
+                        class="mobile-link text-white hover:text-primary transition-colors duration-300"
+                        href="#"
+                >
+                        Sobre Mi
+                </a>
+            </div>
+        </div>
 </nav>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const btn = document.getElementById("mobile-menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        const links = document.querySelectorAll(".mobile-link");
+        const icon = btn?.querySelector("span");
+
+        let isOpen = false;
+
+        const toggleMenu = () => {
+            isOpen = !isOpen;
+            if (isOpen) {
+                // Abrir
+                menu?.classList.remove("opacity-0", "pointer-events-none");
+                if(icon) icon.textContent = "close";
+                document.body.style.overflow = "hidden"; // Evitar scroll
+            } else {
+                // Cerrar
+                menu?.classList.add("opacity-0", "pointer-events-none");
+                if(icon) icon.textContent = "menu";
+                document.body.style.overflow = ""; // Restaurar scroll
+            }
+        };
+
+        btn?.addEventListener("click", toggleMenu);
+
+        // Cerrar el menú si hacen clic en cualquier enlace
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                if (isOpen) toggleMenu();
+            });
+        });
+    });
+</script>
