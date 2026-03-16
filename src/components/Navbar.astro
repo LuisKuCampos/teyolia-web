@@ -1,4 +1,5 @@
 <nav
+        id="main-nav"
         class="fixed w-full z-50 mix-blend-difference text-white py-6 px-8 flex justify-between items-center bg-transparent transition-all duration-300 hover:bg-black/20"
 >
         <div
@@ -13,24 +14,6 @@
                                 class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"
                         ></span>
                 </a>
-                <!-- <a
-                        class="hover:text-primary transition-colors duration-300 relative group"
-                        href="/"
-                >
-                        Sobre Teyolia
-                        <span
-                                class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"
-                        ></span>
-                </a> -->
-                <!-- <a
-                        class="hover:text-primary transition-colors duration-300 relative group"
-                        href="#"
-                >
-                        Blogs
-                        <span
-                                class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"
-                        ></span>
-                </a> -->
         </div>
         <a
                 href="/"
@@ -41,24 +24,6 @@
         <div
                 class="hidden md:flex space-x-8 text-xs tracking-[0.2em] font-medium uppercase"
         >
-                <!-- <a
-                        class="hover:text-primary transition-colors duration-300 relative group"
-                        href="#"
-                >
-                        Portfolio
-                        <span
-                                class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"
-                        ></span>
-                </a>
-                <a
-                        class="hover:text-primary transition-colors duration-300 relative group"
-                        href="#"
-                >
-                        Pages
-                        <span
-                                class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"
-                        ></span>
-                </a> -->
                 <a
                         class="hover:text-primary transition-colors duration-300 relative group"
                         href="#"
@@ -70,62 +35,61 @@
                         ></span>
                 </a>
         </div>
-        <button id="mobile-menu-btn" class="md:hidden text-white z-50">
-                <span class="material-icons-outlined text-3xl">menu</span>
+        <button id="mobile-menu-btn" class="md:hidden text-white z-[60] relative transition-colors duration-300">
+                <span class="material-icons-outlined text-3xl drop-shadow-md">menu</span>
         </button>
-
-        <!-- Menú Móvil Desplegable -->
-        <div 
-            id="mobile-menu" 
-            class="fixed inset-0 bg-black/95 backdrop-blur-md flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-40"
-        >
-            <div class="flex flex-col space-y-8 text-center text-lg tracking-[0.2em] font-medium uppercase mt-12">
-                <a
-                        class="mobile-link text-white hover:text-primary transition-colors duration-300"
-                        href="/"
-                >
-                        Inicio
-                </a>
-                <a
-                        class="mobile-link text-white hover:text-primary transition-colors duration-300"
-                        href="#"
-                >
-                        Sobre Mi
-                </a>
-            </div>
-        </div>
 </nav>
+
+<!-- Menú Móvil Desplegable -->
+<div 
+    id="mobile-menu" 
+    class="fixed inset-0 bg-black/60 backdrop-blur-lg flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 z-[70] translate-x-full"
+>
+    <!-- Botón de Cerrar Dedicado -->
+    <button id="close-menu-btn" class="absolute top-6 right-8 text-white md:hidden">
+        <span class="material-icons-outlined text-3xl drop-shadow-md">close</span>
+    </button>
+
+    <div class="flex flex-col space-y-10 text-center text-xl tracking-[0.25em] font-medium uppercase mt-12">
+        <a
+                class="mobile-link text-gray-200 hover:text-white hover:scale-110 transition-all duration-300"
+                href="/"
+        >
+                Inicio
+        </a>
+        <a
+                class="mobile-link text-gray-200 hover:text-white hover:scale-110 transition-all duration-300"
+                href="#"
+        >
+                Sobre Mi
+        </a>
+    </div>
+</div>
 
 <script>
     document.addEventListener("astro:page-load", () => {
-        const btn = document.getElementById("mobile-menu-btn");
+        const openBtn = document.getElementById("mobile-menu-btn");
+        const closeBtn = document.getElementById("close-menu-btn");
         const menu = document.getElementById("mobile-menu");
         const links = document.querySelectorAll(".mobile-link");
-        const icon = btn?.querySelector("span");
 
-        let isOpen = false;
-
-        const toggleMenu = () => {
-            isOpen = !isOpen;
-            if (isOpen) {
-                // Abrir
-                menu?.classList.remove("opacity-0", "pointer-events-none");
-                if(icon) icon.textContent = "close";
-                document.body.style.overflow = "hidden"; // Evitar scroll
-            } else {
-                // Cerrar
-                menu?.classList.add("opacity-0", "pointer-events-none");
-                if(icon) icon.textContent = "menu";
-                document.body.style.overflow = ""; // Restaurar scroll
-            }
+        const openMenu = () => {
+            menu?.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+            document.body.style.overflow = "hidden"; // Evitar scroll
         };
 
-        btn?.addEventListener("click", toggleMenu);
+        const closeMenuObj = () => {
+            menu?.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
+            document.body.style.overflow = ""; // Restaurar scroll
+        };
+
+        openBtn?.addEventListener("click", openMenu);
+        closeBtn?.addEventListener("click", closeMenuObj);
 
         // Cerrar el menú si hacen clic en cualquier enlace
         links.forEach(link => {
             link.addEventListener("click", () => {
-                if (isOpen) toggleMenu();
+                closeMenuObj();
             });
         });
     });
