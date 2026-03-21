@@ -1,0 +1,165 @@
+---
+import oscarImage from "../assets/oscar/IMG_7100.JPG.jpeg";
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script is:inline src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script is:inline id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#fafaef",
+              "surface-container-high": "#e7ead6",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#f3f3f4",
+              "surface-container-highest": "#e0e5ce",
+              "on-primary-fixed": "#3f3f3f",
+              "secondary-fixed": "#e7e3cf",
+              "on-tertiary-fixed": "#484a4a",
+              "secondary-dim": "#565344",
+              "on-surface-variant": "#5c614f",
+              "secondary": "#625f50",
+              "primary-container": "#e4e2e1",
+              "on-secondary-container": "#545243",
+              "on-tertiary-fixed-variant": "#656667",
+              "secondary-container": "#e7e3cf",
+              "on-secondary-fixed": "#424031",
+              "primary-fixed": "#e4e2e1",
+              "on-primary": "#faf7f6",
+              "on-background": "#2f3424",
+              "tertiary-dim": "#525354",
+              "surface-bright": "#fafaef",
+              "primary-dim": "#535252",
+              "tertiary": "#5e5f60",
+              "on-secondary": "#fef9e4",
+              "tertiary-fixed-dim": "#e5e5e5",
+              "error-container": "#fe8b70",
+              "on-primary-fixed-variant": "#5c5b5b",
+              "outline": "#787d69",
+              "on-error-container": "#742410",
+              "secondary-fixed-dim": "#d9d5c1",
+              "surface-container": "#edefde",
+              "inverse-primary": "#ffffff",
+              "primary": "#5f5e5e",
+              "surface-variant": "#e0e5ce",
+              "on-surface": "#2f3424",
+              "on-tertiary-container": "#5a5c5c",
+              "surface": "#fafaef",
+              "error": "#9e422c",
+              "surface-tint": "#5f5e5e",
+              "on-primary-container": "#525151",
+              "tertiary-container": "#f3f3f4",
+              "surface-dim": "#d7ddc2",
+              "surface-container-low": "#f4f5e7",
+              "on-error": "#fff7f6",
+              "outline-variant": "#afb49f",
+              "inverse-surface": "#0d0f09",
+              "on-tertiary": "#f9f9f9",
+              "primary-fixed-dim": "#d6d4d3",
+              "error-dim": "#5c1202",
+              "inverse-on-surface": "#9d9e94",
+              "on-secondary-fixed-variant": "#5e5c4c"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+    <style is:inline>
+        body {
+            background-color: #e0e2d5; /* Specific mute olive background from request */
+            color: #2f3424;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- Main Content Grid -->
+<main class="flex-grow max-w-[1600px] mx-auto w-full px-8 pt-12 pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Intro Text -->
+<div class="lg:col-span-5 flex flex-col gap-10">
+<h1 class="text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight font-body font-semibold text-on-surface">
+                    Hola, soy Oscar Aguilar <br/>
+
+<span class="font-headline italic font-light"> FOTÓGRAFO</span>
+<span class="block text-3xl md:text-4xl lg:text-5xl font-light opacity-80 uppercase tracking-widest mt-2">PROFESIONAL</span>
+</h1>
+<p class="mt-4 text-on-surface-variant text-lg md:text-xl max-w-2xl leading-relaxed">
+    Especializado en capturar la esencia de las personas y los momentos irrepetibles. Mi enfoque se centra en la iluminación natural, la composición emotiva y la creación de narrativas visuales que perduren en el tiempo. Cada fotografía es una historia esperando ser contada.
+</p>
+<!-- CTA -->
+<div class="flex">
+<a href="https://wa.me/529911724481" target="_blank" rel="noopener noreferrer" class="group flex items-center bg-on-surface text-on-primary rounded-full pl-3 pr-8 py-3 gap-4 hover:scale-105 transition-transform duration-300 ease-out">
+<div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-on-surface group-hover:rotate-45 transition-transform">
+<span class="material-symbols-outlined" data-icon="north_east">north_east</span>
+</div>
+<span class="font-label text-sm font-bold tracking-widest">CONTÁCTAME</span>
+</a>
+</div>
+</div>
+
+<!-- Center Column: Circular Portrait -->
+<div class="lg:col-span-4 flex justify-center">
+<div class="relative w-full aspect-[4/5] max-w-sm">
+<div class="absolute inset-0 rounded-full border-[1.5px] border-outline-variant/30 scale-105"></div>
+<div class="w-full h-full rounded-full overflow-hidden border-8 border-surface-container-low shadow-2xl bg-surface-container-highest">
+<img alt="Retrato de Oscar Aguilar, Fotógrafo" class="w-full h-full object-cover grayscale brightness-110" data-alt="Vertical portrait of Oscar Aguilar" src={oscarImage.src}/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-4 -right-4 w-24 h-24 bg-surface-container-low/50 backdrop-blur-md rounded-full flex items-center justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant text-4xl" data-icon="photo_camera" data-weight="fill" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+</div>
+</div>
+</div>
+
+<!-- Right Column: Social Links -->
+<div class="lg:col-span-3">
+<ul class="space-y-12">
+<li class="group">
+<a href="https://www.instagram.com/teyolia_studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="block hover:translate-x-2 transition-transform duration-300">
+    <p class="text-4xl lg:text-5xl font-body font-medium text-on-surface mb-2 tracking-tighter">Instagram</p>
+    <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant opacity-70 flex items-center gap-2">
+        <span class="material-symbols-outlined text-[16px]">north_east</span> @teyolia_studio
+    </p>
+</a>
+</li>
+<li class="group">
+<a href="https://www.facebook.com/profile.php?id=61565091290335" target="_blank" rel="noopener noreferrer" class="block hover:translate-x-2 transition-transform duration-300">
+    <p class="text-4xl lg:text-5xl font-body font-medium text-on-surface mb-2 tracking-tighter">Facebook</p>
+    <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant opacity-70 flex items-center gap-2">
+        <span class="material-symbols-outlined text-[16px]">north_east</span> Visitar Perfil
+    </p>
+</a>
+</li>
+<li class="group">
+<a href="https://wa.me/529911724481" target="_blank" rel="noopener noreferrer" class="block hover:translate-x-2 transition-transform duration-300">
+    <p class="text-4xl lg:text-5xl font-body font-medium text-on-surface mb-2 tracking-tighter">WhatsApp</p>
+    <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant opacity-70 flex items-center gap-2">
+        <span class="material-symbols-outlined text-[16px]">chat</span> Enviar Mensaje
+    </p>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</main>
+
+</body>
+</html>
